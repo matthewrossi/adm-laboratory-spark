@@ -1,0 +1,6 @@
+master:
+  configOptions:
+    -Dspark.ui.reverseProxy=true
+worker:
+  configOptions:
+    -Dspark.ui.reverseProxy=true
