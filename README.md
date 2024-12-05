@@ -67,7 +67,7 @@ spark-worker-1   1/1     Running   0          35m
 
 ## Launch a test job
 
-Get a terminal on the Spark master node:
+Get a terminal on a Spark worker node:
 
 ```bash
 ./login_spark.sh
@@ -76,7 +76,7 @@ Get a terminal on the Spark master node:
 You have now access to the Spark 3.3.2 cluster. Launch a test MapReduce job to compute pi:
 
 ```bash
-run-example SparkPi 10
+spark-submit --master spark://spark-master-svc:7077 --class org.apache.spark.examples.SparkPi examples/jars/spark-examples_2.12-3.5.3.jar 100
 ```
 
 ## Access the Spark Dashboard
